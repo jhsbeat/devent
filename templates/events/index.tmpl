@@ -1,0 +1,13 @@
+{{ define "events/index.tmpl" }}
+<html>
+    <h1>List of Events</h1>
+    {{ range .events}}
+        <div>
+            <h3>Title : {{.Title}} ({{.Id}})</h3>
+            <p>Description : {{.Description}}</p>
+            <p>Start : {{.StartAt | }}</p>
+            <p>End : {{.EndAt}}</p>
+        </div>
+    {{ end }}
+</html>
+{{ end }}
