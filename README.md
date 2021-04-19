@@ -2,7 +2,7 @@
 
 <img align="right" width="300px" src="https://raw.githubusercontent.com/jhsbeat/devent/master/assets/image/logo/logo.png">
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/jhsbeat/devent)](https://goreportcard.com/badge/github.com/jhsbeat/devent)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jhsbeat/devent)](https://goreportcard.com/report/github.com/jhsbeat/devent#golint)
 
 A Toy Project built on top of [Go](https://golang.org), [Gin Gonic](https://github.com/gin-gonic), [Gorm](https://gorm.io/index.html) in which shows the list of upcomming events(Meetups, Conferences) for Developers.
 
