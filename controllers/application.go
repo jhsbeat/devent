@@ -1,3 +1,4 @@
+// Controllers package to handle controllers of MVC web application
 package controllers
 
 import (
@@ -7,6 +8,7 @@ import (
 	"gorm.io/gorm"
 )
 
+// Repository type of GORM DB.
 type Repo struct {
 	Db *gorm.DB
 }

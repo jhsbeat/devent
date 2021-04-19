@@ -1,3 +1,4 @@
+// A package for dealing with database connection and configuration (w/ GORM)
 package database
 
 import (
@@ -8,11 +9,12 @@ import (
 	"gorm.io/gorm"
 )
 
-var Db *gorm.DB
+var database *gorm.DB
 
+// Initialize(configure, open connection) database.
 func InitDb() *gorm.DB {
-	Db = connectDB()
-	return Db
+	database = connectDB()
+	return database
 }
 
 func connectDB() *gorm.DB {

@@ -1,16 +1,25 @@
 {{ define "events/new.tmpl" }}
 <html>
+<head>
+</head>
+<body>
     <h1>A new Event</h1>
     <form action="/events" method="post" enctype="multipart/form-data">
-        <label>Title : <input type="text" name="title" /></label>
+        <label>Title : <input type="text" name="title" value="테스트용 이벤트" /></label>
         <label>
             Description :
-            <textarea name="description"></textarea>
+            <textarea name="description">테스트용 이벤트 디스크립션입니다.</textarea>
         </label>
-        <label>Start At : <input type="text" name="start_at" /></label>
-        <label>End At : <input type="text" name="end_at" /></label>
-        <label>Link Url : <input type="text" name="link_url" /></label>
+        <label>Start At : <input type="text" name="start_at" id="start-at" /></label>
+        <label>End At : <input type="text" name="end_at" id="end-at" /></label>
+        <label>Link Url : <input type="text" name="link_url" value="http://example.com" /></label>
         <button type="submit">Submit</button>
     </form>
+
+    <script>
+        document.getElementById('start-at').value = (new Date()).toISOString();
+        document.getElementById('end-at').value = (new Date()).toISOString();
+    </script>
+</body>
 </html>
 {{ end }}
