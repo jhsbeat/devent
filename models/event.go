@@ -18,8 +18,16 @@ type Event struct {
 }
 
 // Get Events
-func GetEvents(db *gorm.DB, Event *[]Event) (err error) {
-	err = db.Find(Event).Error
+func GetEvents(db *gorm.DB, event *[]Event) (err error) {
+	err = db.Find(event).Error
+	if err != nil {
+		return err
+	}
+	return nil
+}
+
+func CreateEvent(db *gorm.DB, event *Event) (err error) {
+	err = db.Create(event).Error
 	if err != nil {
 		return err
 	}

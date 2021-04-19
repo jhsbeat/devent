@@ -1,0 +1,16 @@
+{{ define "events/new.tmpl" }}
+<html>
+    <h1>A new Event</h1>
+    <form action="/events" method="post" enctype="multipart/form-data">
+        <label>Title : <input type="text" name="title" /></label>
+        <label>
+            Description :
+            <textarea name="description"></textarea>
+        </label>
+        <label>Start At : <input type="text" name="start_at" /></label>
+        <label>End At : <input type="text" name="end_at" /></label>
+        <label>Link Url : <input type="text" name="link_url" /></label>
+        <button type="submit">Submit</button>
+    </form>
+</html>
+{{ end }}

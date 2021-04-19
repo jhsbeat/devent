@@ -1,6 +1,7 @@
 {{ define "events/index.tmpl" }}
 <html>
     <h1>List of Events</h1>
+    <p><a href="/events/new">Add a New Event</a></p>
     {{ range .events}}
         <div>
             <h3>Title : {{.Title}} ({{.Id}})</h3>

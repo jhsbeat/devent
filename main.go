@@ -25,8 +25,11 @@ func setupRouter() *gin.Engine {
 
 	r.LoadHTMLGlob("templates/**/*")
 
-	eventRepo := controllers.New()
-	r.GET("/", eventRepo.GetEvents)
+	repo := controllers.New()
+	r.GET("/", repo.GetEvents)
+	r.GET("/events", repo.GetEvents)
+	r.GET("/events/new", repo.NewEvent)
+	r.POST("/events", repo.CreateEvent)
 
 	return r
 }
