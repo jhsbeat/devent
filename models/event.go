@@ -1,4 +1,4 @@
-// Models package to handle models of MVC web application
+// Package models handles models of MVC web application
 package models
 
 import (

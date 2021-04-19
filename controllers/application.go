@@ -1,4 +1,4 @@
-// Controllers package to handle controllers of MVC web application
+// Package controllers handles controllers of MVC web application
 package controllers
 
 import (
@@ -8,11 +8,12 @@ import (
 	"gorm.io/gorm"
 )
 
-// Repository type of GORM DB.
+// Repo is a struct type contains Gorm DB pointer.
 type Repo struct {
 	Db *gorm.DB
 }
 
+// New function initialize database,runs migrations and return the reference of Repo.
 func New() *Repo {
 	db := database.InitDb()
 	db.AutoMigrate(&models.Event{})
